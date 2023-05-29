@@ -1,0 +1,18 @@
+
+Bangla Tutorial - Build a registration system with email verification using PHP By PHPMailer
+https://github.com/PHPMailer/PHPMailer
+
+
+https://mailtrap.io/
+
+$phpmailer = new PHPMailer();
+$phpmailer->isSMTP();
+$phpmailer->Host = 'sandbox.smtp.mailtrap.io';
+$phpmailer->SMTPAuth = true;
+$phpmailer->Port = 2525;
+$phpmailer->Username = 'a0f42818a1edd4';
+$phpmailer->Password = '12366556660b23';
+
+
+
+
