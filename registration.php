@@ -23,7 +23,7 @@ if ($result) {
     echo "Registration successfull. Please verify your email.";
 
     $sendMl->send($code);
-
+#123Admin
   }
 
 }

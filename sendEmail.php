@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 
         
 
-        function send($code)
+        function send($code,$email)
 
         {
 
@@ -30,25 +30,25 @@ use PHPMailer\PHPMailer\Exception;
 
             $mail->isSMTP(); // using SMTP protocol                                     
 
-            $mail->Host = 'smtp.mailtrap.io'; // SMTP host as gmail 
+            $mail->Host = 'ssl://smtp.gmail.com'; // SMTP host as gmail 
 
             $mail->SMTPAuth = true;  // enable smtp authentication                             
 
-            $mail->Username = 'a0f42818a1edd4';  // sender gmail host              
+            $mail->Username = 'jannat.mamurjor@gmail.com';  // sender gmail host              
 
-            $mail->Password = '12366556660b23'; // sender gmail host password   
+            $mail->Password = 'ihztsijwheggbfmy'; // sender gmail host password   
             
 
 
             $mail->SMTPSecure = 'tls';  // for encrypted connection                           
 
-            $mail->Port = 587;   // port for SMTP     
+            $mail->Port = 465;   // port for SMTP     
 
             $mail->isHTML(true); 
 
             $mail->setFrom('hadijaman@gmail.com', "Sender"); // sender's email and name
 
-            $mail->addAddress('mamurjorbd@gmail.com', "Receiver");  // receiver's email and name
+            $mail->addAddress($email, "HADIJAMAN");  // receiver's email and name
 
             $headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 
@@ -301,7 +301,7 @@ use PHPMailer\PHPMailer\Exception;
         <td>&nbsp;</td>
         <td class="container">
           <div class="content">
-            <span class="preheader">Subscribe to Coloured.com.ng mailing list</span>
+           
             <table class="main">
 
               <!-- START MAIN CONTENT AREA -->
@@ -341,11 +341,7 @@ use PHPMailer\PHPMailer\Exception;
             <!-- START FOOTER -->
             <div class="footer">
               <table border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="content-block">
-                    <span class="apple-link">Coloured.com.ng | Feminism | Culture | Law | Feminists Rising</span>
-                    <br> Don't like these emails? <a href="#">Unsubscribe</a>.
-                  </td>
+                
                 </tr>
                 <tr>
                   <td class="content-block powered-by">
